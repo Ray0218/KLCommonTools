@@ -1,5 +1,8 @@
 PODS:
-  - KLCommonTools (0.1.0):
+  - KLCommonTools (0.1.1):
+    - KLCommonTools/Category (= 0.1.1)
+    - MBProgressHUD (~> 0.9.2)
+  - KLCommonTools/Category (0.1.1):
     - MBProgressHUD (~> 0.9.2)
   - MBProgressHUD (0.9.2)
 
@@ -15,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCommonTools: 8243d38d40a5ad74aaee189eff04523e69cf2acf
+  KLCommonTools: 702f628bc1e1e38c0affca53650aa0d2a19f76e6
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
 PODFILE CHECKSUM: 358ae5f168a25072792a89491b5a0a2265d4929f
