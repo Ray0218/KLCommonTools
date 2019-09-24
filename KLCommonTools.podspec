@@ -34,16 +34,16 @@ TODO: Add long description of the pod here.
 
 # 基础依赖
 s.subspec "Configure" do |ss|
-ss.source_files     = "KLCommonTools/Classes/Configure/**/* "
+ss.source_files     = "KLCommonTools/Classes/Configure/* "
 end
 #category
 s.subspec "Category" do |ss|
-ss.source_files     = "KLCommonTools/Classes/Category/**/*"
+ss.source_files     = "KLCommonTools/Classes/Category/*"
 ss.dependency 'KLCommonTools/Classes/Configure'
 end
 
 s.subspec "Others" do |ss|
-ss.source_files     = "KLCommonTools/Classes/Others/**/*"
+ss.source_files     = "KLCommonTools/Classes/Others/*"
 ss.dependency 'KLCommonTools/Classes/Configure'
 s.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
 end
