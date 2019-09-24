@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
- 
+#define HasMBProgress (__has_include(<YYWebImage/YYWebImage.h>))
+
 @interface KLProgressManager : NSObject
 
 /**

@@ -7,8 +7,16 @@
 //
 
 #import "KLProgressManager.h"
-#import <MBProgressHUD/MBProgressHUD.h>
 #import "KLConst.h"
+
+#if __has_include (<MBProgressHUD/MBProgressHUD.h>)
+
+#import <MBProgressHUD/MBProgressHUD.h>
+
+#endif
+
+
+
 
 #define kDefaultView [[UIApplication sharedApplication] keyWindow]
 
@@ -57,6 +65,9 @@ BOOL isShowGloomy;//是否显示深色背景
 + (void)showGloomy:(BOOL)isShow {
     isShowGloomy = isShow;
 }
+
+#if HasMBProgress
+
 #pragma mark - 简短提示语
 + (void) showBriefAlert:(NSString *) message inView:(UIView *) view{
     
@@ -245,6 +256,9 @@ BOOL isShowGloomy;//是否显示深色背景
     }
     return nil;
 }
+
+#endif
+
 @end
 
 
