@@ -1,10 +1,10 @@
 PODS:
-  - KLCommonTools (0.1.0)
+  - KLCommonTools (0.1.0):
+    - MBProgressHUD (~> 0.9.2)
   - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
   - KLCommonTools (from `../`)
-  - MBProgressHUD (~> 0.9.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCommonTools: a4996ae4dd46d35e407c17ad36ed3fd8115fc7b0
+  KLCommonTools: 8243d38d40a5ad74aaee189eff04523e69cf2acf
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
-PODFILE CHECKSUM: 829cb41393ba5ceea4319705d1dffb7e7b7aee09
+PODFILE CHECKSUM: 358ae5f168a25072792a89491b5a0a2265d4929f
 
 COCOAPODS: 1.7.3

@@ -4,8 +4,7 @@ platform :ios, '8.0'
 
 target 'KLCommonTools_Example' do
   pod 'KLCommonTools', :path => '../'
-  pod 'MBProgressHUD', '~> 0.9.2'
-
+ 
 
   target 'KLCommonTools_Tests' do
     inherit! :search_paths
