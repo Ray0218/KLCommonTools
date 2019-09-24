@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022B41DE0B759182C9C6D945 /* KLCommonTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KLCommonTools.podspec; path = ../KLCommonTools.podspec; sourceTree = "<group>"; };
+		022B41DE0B759182C9C6D945 /* KLCommonTools.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = KLCommonTools.podspec; path = ../KLCommonTools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		12F45E13560D912BF2504F3F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* KLCommonTools_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLCommonTools_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
