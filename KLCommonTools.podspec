@@ -1,14 +1,14 @@
 #
 # Be sure to run `pod lib lint KLCommonTools.podspec' to ensure this is a
 # valid spec before submitting.
-#
+#/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools.xcodeproj
 # Any lines starting with a # are optional, but their use is encouraged
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
 Pod::Spec.new do |s|
   s.name             = 'KLCommonTools'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of KLCommonTools.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,26 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'KLCommonTools/Classes/**/*'
+s.source_files = 'KLCommonTools/Classes/**/*'
+
+# 基础依赖
+#s.subspec "Configure" do |ss|
+#ss.source_files     = "KLCommonTools/Classes/Configure/* "
+#end
+#category
+#s.subspec "Category" do |ss|
+#ss.source_files     = "KLCommonTools/Classes/Category/*"
+#ss.dependency 'KLCommonTools/Classes/Configure'
+#end
+
+#s.subspec "Others" do |ss|
+#ss.source_files     = "KLCommonTools/Classes/Others/*"
+#ss.dependency 'KLCommonTools/Classes/Configure'
+#s.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
+#end
+
+
+
   
   # s.resource_bundles = {
   #   'KLCommonTools' => ['KLCommonTools/Assets/*.png']
@@ -38,5 +57,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-   s.dependency 'MBProgressHUD', '~> 0.9.2'
+s.dependency 'MBProgressHUD', '~> 0.9.2'
 end
