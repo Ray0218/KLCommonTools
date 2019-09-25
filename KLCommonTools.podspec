@@ -56,12 +56,13 @@ Pod::Spec.new do |s|
         # end
         #  end
 
-
 # s.resource_bundles = {
 #   'KLCommonTools' => ['KLCommonTools/Assets/*.png']
 # }
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 # s.frameworks = 'UIKit', 'MapKit'
+#s.libraries = 'c++','xml2' #  该pod依赖的系统资源文件
+
 #s.dependency 'MBProgressHUD', '~> 0.9.2'
 end
