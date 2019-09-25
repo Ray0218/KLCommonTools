@@ -7,6 +7,7 @@
 //
 
 #import "KLViewController.h"
+#import <KLProgressManager.h>
 
 @interface KLViewController ()
 
@@ -18,7 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
+    
+    [KLProgressManager showLoading];
+
+ }
 
 - (void)didReceiveMemoryWarning
 {
