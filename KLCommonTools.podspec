@@ -30,23 +30,23 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-s.source_files = 'KLCommonTools/Classes/**/*'
+  #s.source_files = 'KLCommonTools/Classes/**/*'
 
 # 基础依赖
-#s.subspec "Configure" do |ss|
-#ss.source_files     = "KLCommonTools/Classes/Configure/* "
-#end
+s.subspec 'Configure' do |ss|
+ss.source_files     = 'KLCommonTools/Classes/Configure/*'
+end
 #category
-#s.subspec "Category" do |ss|
-#ss.source_files     = "KLCommonTools/Classes/Category/*"
-#ss.dependency 'KLCommonTools/Classes/Configure'
-#end
+s.subspec 'Category' do |ss|
+ss.source_files     = 'KLCommonTools/Classes/Category/*'
+ss.dependency 'KLCommonTools/Configure'
+end
 
-#s.subspec "Others" do |ss|
-#ss.source_files     = "KLCommonTools/Classes/Others/*"
-#ss.dependency 'KLCommonTools/Classes/Configure'
-#s.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
-#end
+s.subspec 'Others' do |ss|
+ss.source_files     = 'KLCommonTools/Classes/Others/*'
+ss.dependency 'KLCommonTools/Configure'
+ss.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
+end
 
 
 
@@ -57,5 +57,5 @@ s.source_files = 'KLCommonTools/Classes/**/*'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-s.dependency 'MBProgressHUD', '~> 0.9.2'
+  #s.dependency 'MBProgressHUD', '~> 0.9.2'
 end
