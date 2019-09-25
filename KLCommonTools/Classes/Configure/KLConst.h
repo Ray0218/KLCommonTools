@@ -26,8 +26,14 @@
 /************************ 颜色宏定义 ************************/
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0x00FF0000) >> 16)) / 255.0     green:((float)((rgbValue & 0x0000FF00) >>  8)) / 255.0 blue:((float)((rgbValue & 0x000000FF) >>  0)) / 255.0 alpha:1.0]
-/************************ 颜色宏定义机型判断************************/
 
+/************************ 图片宏定义 ************************/
+ #define kIMAGE(name) \
+[UIImage imageNamed:name]
+/************************ 颜色宏定义机型判断************************/
+#pragma mark  机型判断
+// 判断是否是ipad
+#define isPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 // 判断iPhoneX
 #define kIS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
 // 判断iPHoneXr
