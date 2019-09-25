@@ -13,12 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage *)imageWithColor:(UIColor *)color;
 
-
 - (UIImage *)jy_imageWithTintColor:(UIColor *)tintColor  ;
-
+//左右渐变
 +(UIImage *)jy_creatGradualImageWithLeftColor:(UIColor*)leftColor rightColor:(UIColor*)rightColor ;
-
+//上下渐变
 +(UIImage *)jy_creatGradualImageWithTopColor:(UIColor*)topColor bottomColor:(UIColor*)bottomColor ;
+
++(UIImage *)ps_creatGradualColorImage ;
 
 @end
 

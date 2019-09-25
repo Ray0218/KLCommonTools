@@ -88,7 +88,19 @@
     
 }
 
-
++(UIImage *)ps_creatGradualColorImage{
+    
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors =@[(__bridge id)UIColorFromRGB(0x1B7CFE).CGColor, (__bridge id)UIColorFromRGB(0x40B9FF).CGColor];
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1, 0);
+    gradientLayer.frame = CGRectMake(0,0, SCREEN_WIDTH, 1);
+    UIGraphicsBeginImageContext(gradientLayer.frame.size);
+    [gradientLayer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 
 
 @end
