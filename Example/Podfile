@@ -3,11 +3,12 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'KLCommonTools_Example' do
-  pod 'KLCommonTools', :path => '../',:subspecs => [
-  'Configure', # 日期控件
-  'Others' ,# 分享组件
-  'Category'
-  ]
+  pod 'KLCommonTools', :path => '../'
+#  ,:subspecs => [
+#  'Configure', # 日期控件
+#  'Others' ,# 分享组件
+#  'Category'
+#  ]
  
 
   target 'KLCommonTools_Tests' do

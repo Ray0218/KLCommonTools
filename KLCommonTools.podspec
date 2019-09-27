@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'KLCommonTools'
-    s.version          = '0.1.5'
+    s.version          = '0.1.6'
     s.summary          = 'A short description of KLCommonTools.'
     
     # This description is used to generate tags and improve search results.
@@ -48,21 +48,28 @@ Pod::Spec.new do |s|
         ss.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
     end
     
+    s.subspec 'WebView' do |ss|
+        ss.source_files     = 'KLCommonTools/Classes/WebView/**/*'
+    end
+    
     #  s.subspec 'Tool' do |ss|
-        #ss.source_files     = 'KLCommonTools/Classes/Tool/**/*'
-        #子文件夹的写法（一定要把父文件夹的source_files给注释掉）
-        # ss.subspec 'Define' do |defi|
-        #     defi.source_files =  'KLCommonTools/Classes/Tool/Define/**/*'
-        # end
-        #  end
+    #ss.source_files     = 'KLCommonTools/Classes/Tool/**/*'
+    #子文件夹的写法（一定要把父文件夹的source_files给注释掉）
+    # ss.subspec 'Define' do |defi|
+    #     defi.source_files =  'KLCommonTools/Classes/Tool/Define/**/*'
+    # end
+    #  end
+    
+ 
+ # s.resource = 'KLCommonTools/Assets/*.bundle'
 
-# s.resource_bundles = {
-#   'KLCommonTools' => ['KLCommonTools/Assets/*.png']
-# }
-
-# s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
-#s.libraries = 'c++','xml2' #  该pod依赖的系统资源文件
-
-#s.dependency 'MBProgressHUD', '~> 0.9.2'
+     s.resource_bundles = {
+    'KLCommonTools' => ['KLCommonTools/Assets/*']
+ }
+    
+    # s.public_header_files = 'Pod/Classes/**/*.h'
+    # s.frameworks = 'UIKit', 'MapKit'
+    #s.libraries = 'c++','xml2' #  该pod依赖的系统资源文件
+    
+    #s.dependency 'MBProgressHUD', '~> 0.9.2'
 end

@@ -33,7 +33,8 @@
 /************************ 颜色宏定义机型判断************************/
 #pragma mark  机型判断
 // 判断是否是ipad
-#define isPad ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+#define isPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 // 判断iPhoneX
 #define kIS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) && !isPad : NO)
 // 判断iPHoneXr

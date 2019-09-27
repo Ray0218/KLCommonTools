@@ -7,12 +7,27 @@
 //
 
 #import "KLAppDelegate.h"
+#import "KLViewController.h"
+
 
 @implementation KLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor] ;
+    
+    KLViewController  *vc = [[KLViewController alloc]init];
+    
+    UINavigationController *Nvc = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    self.window.rootViewController = Nvc ;
+    
+    [self.window makeKeyAndVisible];
+    
+ 
     return YES;
 }
 
