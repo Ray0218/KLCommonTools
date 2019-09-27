@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'KLCommonTools'
-    s.version          = '0.1.7'
+    s.version          = '0.1.8'
     s.summary          = 'A short description of KLCommonTools.'
     
     # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '8.0'
     
-    #s.source_files = 'KLCommonTools/Classes/**/*'
+    #s.source_files = 'KLCommonTools/Classes/**/*.{h,m}'
     
     # 基础依赖
     s.subspec 'Configure' do |ss|
@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'WebView' do |ss|
-        ss.resource     = 'KLCommonTools/Classes/WebView/**/*'
+        ss.source_files     = 'KLCommonTools/Classes/WebView/**/*.{h,m}'
     end
     
     #  s.subspec 'Tool' do |ss|
