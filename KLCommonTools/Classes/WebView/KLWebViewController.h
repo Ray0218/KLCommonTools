@@ -39,6 +39,7 @@
 @property (nonatomic, readonly, getter=isLoading) BOOL          loading;            //Web是否正在加载中
 @property (nonatomic, assign) BOOL                              allowsBFNavigationGesture;//是否开启往返手势(默认YES)
 
+ 
 /**
  是否需要拦截请求,默认NO,如果设置为YES,则会将请求cancel,然后调用interceptRequestWithNavigationAction:方法
  

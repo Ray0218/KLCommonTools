@@ -30,6 +30,8 @@
 }
 -(void)pvt_detail:(NSDictionary *)params {
     
+    
+    NSLog(@"detail");
   
     
 }
