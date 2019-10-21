@@ -27,8 +27,18 @@ static NSString *POSTRequest = @"POST";
 
 #pragma mark - 初始化方法栈
 - (instancetype)initWithURLString:(NSString *)urlString {
- 
-    return [self initWithURL:[NSURL URLWithString:urlString]];
+    
+    if (urlString && urlString.length) {
+        
+        NSCharacterSet *customAllowedSet =  [NSCharacterSet characterSetWithCharactersInString:@"`#%^{}\"[]|\\<> "].invertedSet ;
+        
+        return [self initWithURL:[NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:customAllowedSet]]];
+        
+    }else {
+        return [self initWithURL:[NSURL URLWithString:@"about:blank"]];
+        
+    }
+    
 }
 
 - (instancetype)initWithURL:(NSURL *)URL {
@@ -62,8 +72,8 @@ static NSString *POSTRequest = @"POST";
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-     [self sutupUI];
+    
+    [self sutupUI];
     [self fetchData];
 }
 
@@ -146,7 +156,7 @@ static NSString *POSTRequest = @"POST";
 #pragma mark - LoadRequest
 - (void)loadURLRequest:(NSMutableURLRequest *)request {
     
- 
+    
     request.timeoutInterval = _timeoutInternal;
     request.cachePolicy = _cachePolicy;
     
@@ -251,7 +261,7 @@ static NSString *POSTRequest = @"POST";
         
         NSBundle *resourceBundle = [NSBundle bundleWithPath:bundlePath];
         imagePath =[NSString stringWithFormat:@"%@/%@/%@",resourceBundle.resourcePath,@"JSResources.bundle", @"webView_close"];
-     }
+    }
     UIImage *closeItemImage = [[UIImage imageNamed:imagePath] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     if (self.navigationItem.rightBarButtonItem == _doneItem && self.navigationItem.rightBarButtonItem != nil) {
         _closeNavLeftItem = [[UIBarButtonItem alloc] initWithImage:closeItemImage style:0 target:self action:@selector(doneButtonClicked:)];
