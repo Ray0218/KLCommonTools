@@ -30,9 +30,7 @@ static NSString *POSTRequest = @"POST";
     
     if (urlString && urlString.length) {
         
-        NSCharacterSet *customAllowedSet =  [NSCharacterSet characterSetWithCharactersInString:@"`#%^{}\"[]|\\<> "].invertedSet ;
-        
-        return [self initWithURL:[NSURL URLWithString:[urlString stringByAddingPercentEncodingWithAllowedCharacters:customAllowedSet]]];
+        return [self initWithURL:[NSURL URLWithString:urlString]];
         
     }else {
         return [self initWithURL:[NSURL URLWithString:@"about:blank"]];
@@ -431,7 +429,7 @@ static NSString *POSTRequest = @"POST";
     UIViewController *vc = [self viewController];
     if (vc && vc.isViewLoaded && _webView && [_webView superview]){
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message ? message : @"" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             completionHandler();
         }]];
         [vc presentViewController:alert animated:YES completion:NULL];
@@ -445,10 +443,10 @@ static NSString *POSTRequest = @"POST";
     UIViewController *vc = [self viewController];
     if (vc && vc.isViewLoaded && _webView && [_webView superview]){
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message ? message : @"" preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             completionHandler(YES);
         }]];
-        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             completionHandler(NO);
         }]];
         [vc presentViewController:alert animated:YES completion:NULL];
@@ -466,15 +464,16 @@ static NSString *POSTRequest = @"POST";
             textField.textColor = [UIColor blackColor];
             textField.placeholder = defaultText ? defaultText : @"";
         }];
-        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             completionHandler([[alert.textFields lastObject] text]);
         }]];
-        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             completionHandler(nil);
         }]];
         [vc presentViewController:alert animated:YES completion:NULL];
     }else{
         completionHandler(nil);
+        
     }
 }
 

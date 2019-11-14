@@ -62,7 +62,7 @@
     btn4.frame = CGRectMake(40, 450, 200, 45);
     [btn4 addTarget:self action:@selector(pvt_post) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn4];
-
+    
  }
 
 -(void)pvt_loadJS {
