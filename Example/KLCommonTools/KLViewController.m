@@ -9,6 +9,7 @@
 #import "KLViewController.h"
 #import <KLProgressManager.h>
 #import <KLWebViewController.h>
+ 
   @interface KLViewController ()
 
 @end
@@ -22,6 +23,10 @@
     
 //    [KLProgressManager showLoading];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    
+    
+    
 
     //设置导航栏为不透明
     self.navigationController.navigationBar.translucent = NO;

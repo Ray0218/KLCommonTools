@@ -20,6 +20,7 @@
     method_exchangeImplementations(sysMethod, cusMethod);
 }
 
+
 +(instancetype)kl_URLWithString:(NSString*)URLString{
     
     NSURL *url = [NSURL kl_URLWithString:URLString] ;

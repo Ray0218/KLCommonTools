@@ -28,7 +28,7 @@
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0x00FF0000) >> 16)) / 255.0     green:((float)((rgbValue & 0x0000FF00) >>  8)) / 255.0 blue:((float)((rgbValue & 0x000000FF) >>  0)) / 255.0 alpha:1.0]
 
 /************************ 图片宏定义 ************************/
- #define kIMAGE(name) \
+#define kIMAGE(name) \
 [UIImage imageNamed:name]
 /************************ 颜色宏定义机型判断************************/
 #pragma mark  机型判断
@@ -83,4 +83,22 @@ FOUNDATION_STATIC_INLINE UIViewController * KCurrentViewController() {
         }
     }
     return viewController;
+}
+
+
+FOUNDATION_STATIC_INLINE BOOL kIsEmptyString(NSString* string){
+    
+    if (!string) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimmedStr = [string stringByTrimmingCharactersInSet:set];
+    if (!trimmedStr.length) {
+        return YES;
+    }
+    return NO;
+    
 }
