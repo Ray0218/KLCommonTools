@@ -6,7 +6,6 @@
 //
 
 #import "NSURL+Swizzer.h"
-
 #import <objc/runtime.h>
 
 @implementation NSURL (Swizzer)
@@ -20,7 +19,6 @@
     method_exchangeImplementations(sysMethod, cusMethod);
 }
 
-
 +(instancetype)kl_URLWithString:(NSString*)URLString{
     
     NSURL *url = [NSURL kl_URLWithString:URLString] ;
@@ -28,6 +26,7 @@
         URLString  = [URLString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     }
     url = [NSURL kl_URLWithString:URLString];
+   
     return url;
 }
 
