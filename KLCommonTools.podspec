@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'KLCommonTools'
-    s.version          = '0.2.3'
+    s.version          = '0.2.4'
     s.summary          = 'A short description of KLCommonTools.'
     
     # This description is used to generate tags and improve search results.
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
     
     s.description      = <<-DESC
     TODO: Add long description of the pod here.
-    DESC
+    D/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/PodfileESC
     
     s.homepage         = 'https://github.com/Ray0218/KLCommonTools'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
