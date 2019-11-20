@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
     
     s.description      = <<-DESC
     TODO: Add long description of the pod here.
-    D/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/PodfileESC
+    DESC
     
     s.homepage         = 'https://github.com/Ray0218/KLCommonTools'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
