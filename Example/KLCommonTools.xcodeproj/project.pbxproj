@@ -23,6 +23,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		BF04027030DFDF4E4602929C /* Pods_KLCommonTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C2F48C5FA8CB17A8589571 /* Pods_KLCommonTools_Tests.framework */; };
 		D3C8BEB42B9F2931DCA1CE26 /* Pods_KLCommonTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82DF089D3A67E0FF622441E /* Pods_KLCommonTools_Example.framework */; };
+		F7CCE23C23B246A4001AB964 /* KLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CCE23B23B246A4001AB964 /* KLTableViewCell.m */; };
 		F7DDD46F233CBA63003E0386 /* h5.html in Resources */ = {isa = PBXBuildFile; fileRef = F7DDD46E233CBA63003E0386 /* h5.html */; };
 		F7DDD5AA233CC290003E0386 /* KLJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DDD5A9233CC290003E0386 /* KLJSViewController.m */; };
 		F7DDD5AD233DB28C003E0386 /* KLJSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DDD5AC233DB28C003E0386 /* KLJSManager.m */; };
@@ -68,6 +69,8 @@
 		E82DF089D3A67E0FF622441E /* Pods_KLCommonTools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KLCommonTools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBAF1857097D189DB370D66 /* Pods-KLCommonTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLCommonTools_Tests.release.xcconfig"; path = "Target Support Files/Pods-KLCommonTools_Tests/Pods-KLCommonTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F285B09B009E16AEC4EE0D3D /* Pods-KLCommonTools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLCommonTools_Example.release.xcconfig"; path = "Target Support Files/Pods-KLCommonTools_Example/Pods-KLCommonTools_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F7CCE23A23B246A4001AB964 /* KLTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLTableViewCell.h; sourceTree = "<group>"; };
+		F7CCE23B23B246A4001AB964 /* KLTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLTableViewCell.m; sourceTree = "<group>"; };
 		F7DDD46E233CBA63003E0386 /* h5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = h5.html; sourceTree = "<group>"; };
 		F7DDD5A8233CC290003E0386 /* KLJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KLJSViewController.h; path = ../../../../../../../../System/Volumes/Data/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools/KLJSViewController.h; sourceTree = "<group>"; };
 		F7DDD5A9233CC290003E0386 /* KLJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KLJSViewController.m; path = ../../../../../../../../System/Volumes/Data/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools/KLJSViewController.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				6003F59D195388D20070C39A /* KLAppDelegate.m */,
 				6003F5A5195388D20070C39A /* KLViewController.h */,
 				6003F5A6195388D20070C39A /* KLViewController.m */,
+				F7CCE23A23B246A4001AB964 /* KLTableViewCell.h */,
+				F7CCE23B23B246A4001AB964 /* KLTableViewCell.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -257,6 +262,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "ray_ios@163.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 78AKS5G7F3;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -358,11 +366,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-KLCommonTools_Example/Pods-KLCommonTools_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KLCommonTools/KLCommonTools.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KLCommonTools.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,6 +390,7 @@
 				6003F5A7195388D20070C39A /* KLViewController.m in Sources */,
 				F7DDD5AD233DB28C003E0386 /* KLJSManager.m in Sources */,
 				F7DDD5AA233CC290003E0386 /* KLJSViewController.m in Sources */,
+				F7CCE23C23B246A4001AB964 /* KLTableViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +519,7 @@
 			baseConfigurationReference = 8FF8F0508642F5B1587B9601 /* Pods-KLCommonTools_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78AKS5G7F3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLCommonTools/KLCommonTools-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -529,6 +541,7 @@
 			baseConfigurationReference = F285B09B009E16AEC4EE0D3D /* Pods-KLCommonTools_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78AKS5G7F3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLCommonTools/KLCommonTools-Prefix.pch";
 				INFOPLIST_FILE = "KLCommonTools/KLCommonTools-Info.plist";

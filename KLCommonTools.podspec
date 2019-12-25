@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'KLCommonTools'
-    s.version          = '0.2.4'
+    s.version          = '0.2.5'
     s.summary          = 'A short description of KLCommonTools.'
     
     # This description is used to generate tags and improve search results.
@@ -51,6 +51,10 @@ Pod::Spec.new do |s|
     s.subspec 'WebView' do |ss|
         ss.source_files     = 'KLCommonTools/Classes/WebView/**/*.{h,m}'
     end
+    
+    s.subspec 'TableView' do |ss|
+          ss.source_files     = 'KLCommonTools/Classes/TableView/**/*.{h,m}'
+      end
     
     #  s.subspec 'Tool' do |ss|
     #ss.source_files     = 'KLCommonTools/Classes/Tool/**/*'

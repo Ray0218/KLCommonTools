@@ -1,33 +1,40 @@
 PODS:
-  - KLCommonTools (0.1.7):
-    - KLCommonTools/Category (= 0.1.7)
-    - KLCommonTools/Configure (= 0.1.7)
-    - KLCommonTools/Others (= 0.1.7)
-    - KLCommonTools/WebView (= 0.1.7)
-  - KLCommonTools/Category (0.1.7):
+  - KLCommonTools (0.2.4):
+    - KLCommonTools/Category (= 0.2.4)
+    - KLCommonTools/Configure (= 0.2.4)
+    - KLCommonTools/Others (= 0.2.4)
+    - KLCommonTools/TableView (= 0.2.4)
+    - KLCommonTools/WebView (= 0.2.4)
+  - KLCommonTools/Category (0.2.4):
     - KLCommonTools/Configure
-  - KLCommonTools/Configure (0.1.7)
-  - KLCommonTools/Others (0.1.7):
+  - KLCommonTools/Configure (0.2.4)
+  - KLCommonTools/Others (0.2.4):
     - KLCommonTools/Configure
     - MBProgressHUD (~> 0.9.2)
-  - KLCommonTools/WebView (0.1.7)
+  - KLCommonTools/TableView (0.2.4)
+  - KLCommonTools/WebView (0.2.4)
+  - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
 
 DEPENDENCIES:
   - KLCommonTools (from `../`)
+  - Masonry
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - MBProgressHUD
+  trunk:
+    - Masonry
 
 EXTERNAL SOURCES:
   KLCommonTools:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCommonTools: b4c400a1b9486455309d20f0fd3a1e34433dc33a
+  KLCommonTools: 0023f197db6adfc18f26c450c3aeb89014677c6f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
 
-PODFILE CHECKSUM: 76fc99e0b29fe3e1205274cc65a314100d748b3d
+PODFILE CHECKSUM: 0b7d8a758542eda7bec5bc39b38167bdc9147d42
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.9.0.beta.2

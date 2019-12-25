@@ -56,8 +56,15 @@
 //tabbar高度
 #define kTabBarHeight (kIS_IPhoneX_All ? 83.0 : 49.0)
 
+#ifdef DEBUG
 
-#endif /* KLConst_h */
+#define NSLog(format,...) printf("\n[%s] %s [第%d行] %s\n",__TIME__,__FUNCTION__,__LINE__,[[NSString stringWithFormat:format,## __VA_ARGS__] UTF8String]);
+#else
+#define NSLog(format, ...)
+#endif
+
+
+
 
 
 
@@ -102,3 +109,6 @@ FOUNDATION_STATIC_INLINE BOOL kIsEmptyString(NSString* string){
     return NO;
     
 }
+
+
+#endif /* KLConst_h */
