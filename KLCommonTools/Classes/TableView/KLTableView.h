@@ -86,19 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @end
 
-
-@interface KLNormalTableView : KLTableView
-
-@end
-
-
-
-@interface KLEstimateTableView : KLTableView
-
-@end
-
-
-
+ 
 
 NS_ASSUME_NONNULL_END
 

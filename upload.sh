@@ -62,6 +62,8 @@ fi
 read -p "确定? (y/n):" confirmed
 done
 
+read -p "请输入版本描述:" commitDesc
+
 LineNumber=`grep -nE 's.version.*=' ${ProjectName}.podspec | cut -d : -f1`
 sed -i "" "${LineNumber}s/${VersionNumber}/${NewVersionNumber}/g" ${ProjectName}.podspec
 
@@ -70,7 +72,7 @@ echo -e "current version is ${VersionNumber}, new version is ${NewVersionNumber}
 echo -e "================================================\n"
 
 git add .
-git commit -am ${NewVersionNumber}
+git commit -am ${NewVersionNumber}${commitDesc}
 git tag ${NewVersionNumber}
 git push origin master --tags
 
