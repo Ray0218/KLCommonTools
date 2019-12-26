@@ -11,6 +11,8 @@
 #import <KLWebViewController.h>
 #import <KLTableView.h>
 #import "KLTableViewCell.h"
+#import "KLImageViewController.h"
+
 
 
 @interface KLViewController ()<UITableViewDelegate>
@@ -98,7 +100,7 @@
     
     
     
-    self.rTableView.zxDatas = @[@"测试本地交互",@"直接跳转链接",@"直接跳转视频链接",@"post跳转链接"];
+    self.rTableView.zxDatas = @[@"测试本地交互",@"直接跳转链接",@"直接跳转视频链接",@"post跳转链接",@"图片滑动"];
     
     
     __weak typeof(self) weakSelf = self ;
@@ -117,6 +119,8 @@
             
         }else if (indexPath.row == 3){
             [strongSelf pvt_post];
+        }else if (indexPath.row == 4){
+            [strongSelf pvt_imageScroll];
         }
         
     };
@@ -170,6 +174,12 @@
     
     [(UINavigationController*)[UIApplication sharedApplication].keyWindow.rootViewController pushViewController:webVC animated:YES];
     
+}
+
+-(void)pvt_imageScroll{
+    
+    KLImageViewController *vc = [[KLImageViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

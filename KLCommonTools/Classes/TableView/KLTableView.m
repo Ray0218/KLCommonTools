@@ -19,8 +19,7 @@ static NSString *const CELLH = @"cellH";
 @end
 
 
-static NSInteger rcount = 0;
-static NSInteger count = 0;
+
 
 @implementation KLTableView
 
@@ -164,7 +163,7 @@ static NSInteger count = 0;
             }
         }
         
-         BOOL cellContainsModel = NO;
+        BOOL cellContainsModel = NO;
         
         
         id model = [self getModelAtIndexPath:indexPath];
@@ -183,7 +182,7 @@ static NSInteger count = 0;
                 cell.textLabel.text = [NSString stringWithFormat:@" indexpath : %ld - %ld",indexPath.section,indexPath.row];
             }
             
-        } 
+        }
         
         !self.kl_getCellAtIndexPath ? : self.kl_getCellAtIndexPath(indexPath,cell,model);
         
@@ -347,8 +346,10 @@ static NSInteger count = 0;
 
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    rcount ++ ;
-    NSLog(@"%ld $$$$$$$$$$$$$$$   %ld",rcount,indexPath.row);
+    
+    if(self.kl_setCellHAtIndexPath){
+        return self.kl_setCellHAtIndexPath(indexPath);
+    }
     
     return self.estimatedRowHeight ;
 }
@@ -356,10 +357,6 @@ static NSInteger count = 0;
 #pragma mark tableView cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    count ++ ;
-    
-    
-    NSLog(@" %ld  #########  %ld",count,indexPath.row) ;
     
     if(self.kl_setCellHAtIndexPath){
         return self.kl_setCellHAtIndexPath(indexPath);

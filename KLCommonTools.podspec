@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'KLCommonTools'
-    s.version          = '0.2.8'
+    s.version          = '0.2.9'
     s.summary          = 'A short description of KLCommonTools.'
     
     # This description is used to generate tags and improve search results.
@@ -57,6 +57,15 @@ Pod::Spec.new do |s|
           ss.dependency 'KLCommonTools/Category'
 
       end
+    
+    s.subspec 'ImageScroll' do |ss|
+        ss.source_files     = 'KLCommonTools/Classes/ImageScroll/**/*.{h,m}'
+        ss.dependency 'Masonry'
+        ss.dependency 'SDWebImage'
+
+    end
+    
+    
     
     #  s.subspec 'Tool' do |ss|
     #ss.source_files     = 'KLCommonTools/Classes/Tool/**/*'

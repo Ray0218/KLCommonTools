@@ -11,8 +11,7 @@ target 'KLCommonTools_Example' do
 #  'Others' ,# 分享组件
 #  'Category'
 #  ]
- pod 'Masonry'
-
+ 
 
   target 'KLCommonTools_Tests' do
     inherit! :search_paths

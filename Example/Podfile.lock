@@ -1,40 +1,48 @@
 PODS:
-  - KLCommonTools (0.2.4):
-    - KLCommonTools/Category (= 0.2.4)
-    - KLCommonTools/Configure (= 0.2.4)
-    - KLCommonTools/Others (= 0.2.4)
-    - KLCommonTools/TableView (= 0.2.4)
-    - KLCommonTools/WebView (= 0.2.4)
-  - KLCommonTools/Category (0.2.4):
+  - KLCommonTools (0.2.8):
+    - KLCommonTools/Category (= 0.2.8)
+    - KLCommonTools/Configure (= 0.2.8)
+    - KLCommonTools/ImageScroll (= 0.2.8)
+    - KLCommonTools/Others (= 0.2.8)
+    - KLCommonTools/TableView (= 0.2.8)
+    - KLCommonTools/WebView (= 0.2.8)
+  - KLCommonTools/Category (0.2.8):
     - KLCommonTools/Configure
-  - KLCommonTools/Configure (0.2.4)
-  - KLCommonTools/Others (0.2.4):
+  - KLCommonTools/Configure (0.2.8)
+  - KLCommonTools/ImageScroll (0.2.8):
+    - Masonry
+    - SDWebImage
+  - KLCommonTools/Others (0.2.8):
     - KLCommonTools/Configure
     - MBProgressHUD (~> 0.9.2)
-  - KLCommonTools/TableView (0.2.4)
-  - KLCommonTools/WebView (0.2.4)
+  - KLCommonTools/TableView (0.2.8):
+    - KLCommonTools/Category
+  - KLCommonTools/WebView (0.2.8)
   - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
+  - SDWebImage (5.4.0):
+    - SDWebImage/Core (= 5.4.0)
+  - SDWebImage/Core (5.4.0)
 
 DEPENDENCIES:
   - KLCommonTools (from `../`)
-  - Masonry
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - MBProgressHUD
-  trunk:
     - Masonry
+    - MBProgressHUD
+    - SDWebImage
 
 EXTERNAL SOURCES:
   KLCommonTools:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCommonTools: 0023f197db6adfc18f26c450c3aeb89014677c6f
+  KLCommonTools: b3013bb4b8b706d11dd05b95530154c87fd9587f
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  SDWebImage: 5bf6aec6481ae2a062bdc59f9d6c1d1e552090e0
 
-PODFILE CHECKSUM: 0b7d8a758542eda7bec5bc39b38167bdc9147d42
+PODFILE CHECKSUM: af0afcfbf1d3ee3b161e20be5ab1a9b19097276b
 
 COCOAPODS: 1.9.0.beta.2
