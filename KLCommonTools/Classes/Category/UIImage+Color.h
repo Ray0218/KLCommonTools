@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (Color)
 
 + (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)kl_ImageWithColor:(UIColor *)color  size:(CGSize)size isCircle:(BOOL)isCircular;
 
 - (UIImage *)jy_imageWithTintColor:(UIColor *)tintColor  ;
 //左右渐变

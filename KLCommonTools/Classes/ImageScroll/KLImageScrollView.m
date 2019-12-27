@@ -8,6 +8,8 @@
 #import "KLImageScrollView.h"
 #import "KLImageCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "KLPageIndicator.h"
+
 
 
 @interface KLImageScrollView ()<UICollectionViewDataSource,UICollectionViewDelegate>
@@ -21,6 +23,9 @@
 @property(nonatomic,strong)UIImageView *rBackImage;
 
 @property(nonatomic,strong)UIVisualEffectView *rEffectView;
+
+@property(nonatomic,strong)KLPageIndicator *rPageIndicator;
+
 
 @end
 
@@ -58,6 +63,11 @@ static NSString *cellIdentify = @"KLImageScrollView";
         [self addSubview:self.rBackImage];
         [self addSubview:self.rCollectionView];
         _rBaseArray = [NSMutableArray array] ;
+        [self addSubview:self.rPageIndicator];
+        [self.rPageIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(15);
+            make.bottom.equalTo(self).offset(-100);
+        }];
         
     }
     return self;
@@ -71,6 +81,9 @@ static NSString *cellIdentify = @"KLImageScrollView";
     [self.rBaseArray removeAllObjects];
     
     if (rDataArray) {
+        
+        self.rPageIndicator.rTotalCount = rDataArray.count ;
+        
         
         if (!self.rBackImgUrlString) {
             if ([rDataArray[0] hasPrefix:@"http"]) {
@@ -89,11 +102,14 @@ static NSString *cellIdentify = @"KLImageScrollView";
     }
     
     [self.rCollectionView reloadData];
+    
     if (rDataArray.count >1) {
         
         [self.rCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
         self.rCurrentIndex = 1;
     }
+    
+    
 }
 
 
@@ -134,16 +150,34 @@ static NSString *cellIdentify = @"KLImageScrollView";
     
     if (scrollView.contentOffset.x <= 0) {
         [self.rCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.rBaseArray.count-2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-        self.rCurrentIndex = self.rBaseArray.count - 2;
         
     }else if (scrollView.contentOffset.x >= self.frame.size.width*(self.rBaseArray.count - 1)){
         
         [self.rCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
-        self.rCurrentIndex = 1;
     }
+    
+    
+    // 将collectionView在控制器view的中心点转化成collectionView上的坐标
+    CGPoint pInView = [self convertPoint:self.rCollectionView.center toView:self.rCollectionView];
+    
+    // 获取这一点的indexPath
+    NSIndexPath *indexPathNow = [self.rCollectionView indexPathForItemAtPoint:pInView];
+    
+    if (self.rCurrentIndex == indexPathNow.item ) {
+        return ;
+    }
+    self.rCurrentIndex = indexPathNow.item; ;
+    
+    if (indexPathNow.item == 0 || indexPathNow.item == self.rBaseArray.count - 2) {
+        self.rPageIndicator.rCurrentIndex = self.rDataArray.count - 1;
+    }else if (indexPathNow.item == 1 || indexPathNow.item == self.rBaseArray.count - 1){
+        self.rPageIndicator.rCurrentIndex = 0;
+        
+    }else{
+        self.rPageIndicator.rCurrentIndex = indexPathNow.item-1 ;
+    }
+    
 }
-
-
 
 
 -(UICollectionView*)rCollectionView {
@@ -196,5 +230,14 @@ static NSString *cellIdentify = @"KLImageScrollView";
         
     }
     return _rEffectView ;
+}
+
+-(KLPageIndicator*)rPageIndicator {
+    if (!_rPageIndicator) {
+        _rPageIndicator = [[KLPageIndicator alloc]init] ;
+        _rPageIndicator.backgroundColor = [UIColor whiteColor];
+        _rPageIndicator.userInteractionEnabled = NO ;
+    }
+    return _rPageIndicator ;
 }
 @end
