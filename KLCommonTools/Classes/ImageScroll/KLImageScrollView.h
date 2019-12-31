@@ -10,7 +10,7 @@
  
 @interface KLImageScrollView : UIView
 
-@property(nonatomic,strong)NSMutableArray *rDataArray;
+@property(nonatomic,strong)NSArray *rDataArray;
 
 
 /// 背景图

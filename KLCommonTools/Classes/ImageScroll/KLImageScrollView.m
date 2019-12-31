@@ -46,6 +46,8 @@ static NSString *cellIdentify = @"KLImageScrollView";
 
 
 
+
+
 -(void)setRBackImgUrlString:(NSString *)rBackImgUrlString{
     _rBackImgUrlString = rBackImgUrlString ;
     if ([rBackImgUrlString hasPrefix:@"http"]) {
@@ -75,7 +77,7 @@ static NSString *cellIdentify = @"KLImageScrollView";
 
 
 
--(void)setRDataArray:(NSMutableArray *)rDataArray{
+-(void)setRDataArray:(NSArray *)rDataArray{
     _rDataArray = rDataArray;
     
     [self.rBaseArray removeAllObjects];
@@ -83,7 +85,6 @@ static NSString *cellIdentify = @"KLImageScrollView";
     if (rDataArray) {
         
         self.rPageIndicator.rTotalCount = rDataArray.count ;
-        
         
         if (!self.rBackImgUrlString) {
             if ([rDataArray[0] hasPrefix:@"http"]) {
@@ -163,22 +164,28 @@ static NSString *cellIdentify = @"KLImageScrollView";
     // 获取这一点的indexPath
     NSIndexPath *indexPathNow = [self.rCollectionView indexPathForItemAtPoint:pInView];
     
-    if (self.rCurrentIndex == indexPathNow.item ) {
-        return ;
-    }
     self.rCurrentIndex = indexPathNow.item; ;
-    
-    if (indexPathNow.item == 0 || indexPathNow.item == self.rBaseArray.count - 2) {
-        self.rPageIndicator.rCurrentIndex = self.rDataArray.count - 1;
-    }else if (indexPathNow.item == 1 || indexPathNow.item == self.rBaseArray.count - 1){
-        self.rPageIndicator.rCurrentIndex = 0;
-        
-    }else{
-        self.rPageIndicator.rCurrentIndex = indexPathNow.item-1 ;
-    }
     
 }
 
+
+-(void)setRCurrentIndex:(NSInteger)rCurrentIndex{
+    
+    if (_rCurrentIndex == rCurrentIndex) {
+        return ;
+    }
+    _rCurrentIndex = rCurrentIndex ;
+    
+    if (_rCurrentIndex == 0 || _rCurrentIndex == self.rBaseArray.count - 2) {
+        self.rPageIndicator.rCurrentIndex = self.rDataArray.count - 1;
+    }else if (_rCurrentIndex == 1 || _rCurrentIndex == self.rBaseArray.count - 1){
+        self.rPageIndicator.rCurrentIndex = 0;
+        
+    }else{
+        self.rPageIndicator.rCurrentIndex = _rCurrentIndex-1 ;
+    }
+    
+}
 
 -(UICollectionView*)rCollectionView {
     if (!_rCollectionView) {

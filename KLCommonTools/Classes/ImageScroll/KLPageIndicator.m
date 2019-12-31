@@ -95,9 +95,6 @@ static NSString *cellIdentify = @"KLPageCollectionCell";
 
 -(void)setRCurrentIndex:(NSInteger)rCurrentIndex{
     
-    if (_rCurrentIndex == rCurrentIndex) {
-        return ;
-    }
     _rCurrentIndex = rCurrentIndex ;
     [self.rCollectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:rCurrentIndex inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
     
