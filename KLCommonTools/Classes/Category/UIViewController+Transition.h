@@ -13,6 +13,8 @@
 @property(nonatomic,strong,readonly)UINavigationController *rNavigationController;
 
 - (void)kl_showViewController:(UIViewController *)vc completion:(void (^)(void))completion  ;
+- (void)kl_showViewController:(UIViewController *)vc backColor:(UIColor*)backColor completion:(void (^)(void))completion  ;
+
 
 @end
 

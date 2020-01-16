@@ -169,12 +169,24 @@ static const void *kTransitioningDelegateControllerKey = &kTransitioningDelegate
 @implementation UIViewController (Transition)
 
 - (void)kl_showViewController:(UIViewController *)vc completion:(void (^)(void))completion {
+
+    [self kl_showViewController:vc backColor:nil completion:completion];
+}
+
+- (void)kl_showViewController:(UIViewController *)vc backColor:(UIColor*)backColor completion:(void (^)(void))completion  ;
+{
+    
     vc.modalPresentationStyle = UIModalPresentationCustom;
     
-    vc.kl_transitioningDelegateController = [KLTransitioningDelegateController controllerWithAnimator:[KLTransitionAnimator animator]];
     
+    KLTransitionAnimator *aniam = [KLTransitionAnimator animator];
+    vc.kl_transitioningDelegateController = [KLTransitioningDelegateController controllerWithAnimator:aniam];
+    if (backColor) {
+      aniam.dimBackgroundView.backgroundColor = backColor ;
+    }
     vc.transitioningDelegate = vc.kl_transitioningDelegateController;
     [self presentViewController:vc animated:YES completion:completion];
+    
 }
 
 #pragma mark - Property (getter, setter)

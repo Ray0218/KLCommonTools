@@ -49,7 +49,7 @@ static NSString *const CELLH = @"cellH";
 }
 
 #pragma mark 获取对应indexPath的model
--(instancetype)getModelAtIndexPath:(NSIndexPath *)indexPath{
+-(id)getModelAtIndexPath:(NSIndexPath *)indexPath{
     id model = nil;;
     if([self isMultiDatas]){
         if(indexPath.section < self.zxDatas.count){
@@ -66,7 +66,8 @@ static NSString *const CELLH = @"cellH";
         if(indexPath.row < self.zxDatas.count){
             model = self.zxDatas[indexPath.row];
         }else{
-            NSAssert(NO, [NSString stringWithFormat:@"数据源异常，请检查数据源！"]);
+            return nil ;
+//            NSAssert(NO, [NSString stringWithFormat:@"数据源异常，请检查数据源！"]);
         }
     }
     return model;
