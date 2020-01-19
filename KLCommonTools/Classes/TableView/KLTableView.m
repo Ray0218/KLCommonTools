@@ -237,6 +237,13 @@ static NSString *const CELLH = @"cellH";
 
 #pragma mark - UITableViewDelegate
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.klDelegate && [self.klDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {
+        [self.klDelegate  tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath ];
+    }
+}
+
 #pragma mark tableView HeaderView & FooterView
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *headerView = nil;

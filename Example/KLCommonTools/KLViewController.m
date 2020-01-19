@@ -31,13 +31,7 @@
     //    [KLProgressManager showLoading];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    
-    UITextField *textField = [[UITextField alloc]init];
-    
-    [textField setValue:[UIColor redColor] forKeyPath:@"_placeholderLabel.textColor"];
-    [self.view addSubview:textField];
-    
-    
+ 
     //设置导航栏为不透明
     self.navigationController.navigationBar.translucent = NO;
     if (@available(iOS 11.0, *)){

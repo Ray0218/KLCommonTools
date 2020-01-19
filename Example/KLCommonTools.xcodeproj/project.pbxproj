@@ -21,13 +21,13 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		71B9658723D44A8E0082ED40 /* KLJSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9658323D44A8E0082ED40 /* KLJSManager.m */; };
+		71B9658823D44A8E0082ED40 /* KLJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9658523D44A8E0082ED40 /* KLJSViewController.m */; };
 		BF04027030DFDF4E4602929C /* Pods_KLCommonTools_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C2F48C5FA8CB17A8589571 /* Pods_KLCommonTools_Tests.framework */; };
 		D3C8BEB42B9F2931DCA1CE26 /* Pods_KLCommonTools_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82DF089D3A67E0FF622441E /* Pods_KLCommonTools_Example.framework */; };
 		F7CCE23C23B246A4001AB964 /* KLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CCE23B23B246A4001AB964 /* KLTableViewCell.m */; };
 		F7CCE25D23B45A82001AB964 /* KLImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CCE25C23B45A82001AB964 /* KLImageViewController.m */; };
 		F7DDD46F233CBA63003E0386 /* h5.html in Resources */ = {isa = PBXBuildFile; fileRef = F7DDD46E233CBA63003E0386 /* h5.html */; };
-		F7DDD5AA233CC290003E0386 /* KLJSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DDD5A9233CC290003E0386 /* KLJSViewController.m */; };
-		F7DDD5AD233DB28C003E0386 /* KLJSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DDD5AC233DB28C003E0386 /* KLJSManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +63,10 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71B9658323D44A8E0082ED40 /* KLJSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLJSManager.m; sourceTree = "<group>"; };
+		71B9658423D44A8E0082ED40 /* KLJSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLJSViewController.h; sourceTree = "<group>"; };
+		71B9658523D44A8E0082ED40 /* KLJSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLJSViewController.m; sourceTree = "<group>"; };
+		71B9658623D44A8E0082ED40 /* KLJSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLJSManager.h; sourceTree = "<group>"; };
 		8FF8F0508642F5B1587B9601 /* Pods-KLCommonTools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLCommonTools_Example.debug.xcconfig"; path = "Target Support Files/Pods-KLCommonTools_Example/Pods-KLCommonTools_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A6ADAC762C373816A865FAF2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CB6AE4115BBB4C36EE444971 /* Pods-KLCommonTools_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KLCommonTools_Tests.debug.xcconfig"; path = "Target Support Files/Pods-KLCommonTools_Tests/Pods-KLCommonTools_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,10 +79,6 @@
 		F7CCE25B23B45A81001AB964 /* KLImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLImageViewController.h; sourceTree = "<group>"; };
 		F7CCE25C23B45A82001AB964 /* KLImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLImageViewController.m; sourceTree = "<group>"; };
 		F7DDD46E233CBA63003E0386 /* h5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = h5.html; sourceTree = "<group>"; };
-		F7DDD5A8233CC290003E0386 /* KLJSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KLJSViewController.h; path = ../../../../../../../../System/Volumes/Data/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools/KLJSViewController.h; sourceTree = "<group>"; };
-		F7DDD5A9233CC290003E0386 /* KLJSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KLJSViewController.m; path = ../../../../../../../../System/Volumes/Data/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools/KLJSViewController.m; sourceTree = "<group>"; };
-		F7DDD5AB233DB28C003E0386 /* KLJSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KLJSManager.h; path = ../../../../../../../../System/Volumes/Data/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools/KLJSManager.h; sourceTree = "<group>"; };
-		F7DDD5AC233DB28C003E0386 /* KLJSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KLJSManager.m; path = ../../../../../../../../System/Volumes/Data/Users/zl/Desktop/ray/KLCommonTools/KLCommonTools/Example/KLCommonTools/KLJSManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +155,10 @@
 		6003F593195388D20070C39A /* Example for KLCommonTools */ = {
 			isa = PBXGroup;
 			children = (
+				71B9658623D44A8E0082ED40 /* KLJSManager.h */,
+				71B9658323D44A8E0082ED40 /* KLJSManager.m */,
+				71B9658423D44A8E0082ED40 /* KLJSViewController.h */,
+				71B9658523D44A8E0082ED40 /* KLJSViewController.m */,
 				F7DDD46E233CBA63003E0386 /* h5.html */,
 				6003F59C195388D20070C39A /* KLAppDelegate.h */,
 				6003F59D195388D20070C39A /* KLAppDelegate.m */,
@@ -167,10 +171,6 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				F7DDD5A8233CC290003E0386 /* KLJSViewController.h */,
-				F7DDD5A9233CC290003E0386 /* KLJSViewController.m */,
-				F7DDD5AB233DB28C003E0386 /* KLJSManager.h */,
-				F7DDD5AC233DB28C003E0386 /* KLJSManager.m */,
 			);
 			name = "Example for KLCommonTools";
 			path = KLCommonTools;
@@ -394,11 +394,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* KLAppDelegate.m in Sources */,
+				71B9658723D44A8E0082ED40 /* KLJSManager.m in Sources */,
 				6003F5A7195388D20070C39A /* KLViewController.m in Sources */,
-				F7DDD5AD233DB28C003E0386 /* KLJSManager.m in Sources */,
-				F7DDD5AA233CC290003E0386 /* KLJSViewController.m in Sources */,
 				F7CCE23C23B246A4001AB964 /* KLTableViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				71B9658823D44A8E0082ED40 /* KLJSViewController.m in Sources */,
 				F7CCE25D23B45A82001AB964 /* KLImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
