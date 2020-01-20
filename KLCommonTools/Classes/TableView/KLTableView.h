@@ -58,6 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///sectionFooter背景色是否透明，默认为rclear
 @property(nonatomic, strong)UIColor *kl_sectionFooterBackColor;
 
+///kl_showTableSelect 显示点击状态
+@property(nonatomic, assign)BOOL kl_showTableSelect;
+
 
 #pragma mark - 数据获取
 /////获取对应行的cell，把id改成对应类名即可无需强制转换

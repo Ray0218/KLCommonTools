@@ -67,7 +67,7 @@ static NSString *const CELLH = @"cellH";
             model = self.zxDatas[indexPath.row];
         }else{
             return nil ;
-//            NSAssert(NO, [NSString stringWithFormat:@"数据源异常，请检查数据源！"]);
+            //            NSAssert(NO, [NSString stringWithFormat:@"数据源异常，请检查数据源！"]);
         }
     }
     return model;
@@ -380,7 +380,10 @@ static NSString *const CELLH = @"cellH";
 
 #pragma mark tableView 选中某一indexPath
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self deselectRowAtIndexPath:indexPath animated:YES];
+    if (!self.kl_showTableSelect) {
+        
+        [self deselectRowAtIndexPath:indexPath animated:YES];
+    }
     if([self.klDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]){
         [self.klDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
     }else{
