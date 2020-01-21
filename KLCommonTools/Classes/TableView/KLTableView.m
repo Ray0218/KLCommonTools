@@ -380,14 +380,14 @@ static NSString *const CELLH = @"cellH";
 
 #pragma mark tableView 选中某一indexPath
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (!self.kl_showTableSelect) {
-        
-        [self deselectRowAtIndexPath:indexPath animated:YES];
-    }
+    
     if([self.klDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]){
         [self.klDelegate tableView:tableView didSelectRowAtIndexPath:indexPath];
     }else{
-        [self deselectRowAtIndexPath:indexPath animated:YES];
+        if (!self.kl_showTableSelect) {
+            
+            [self deselectRowAtIndexPath:indexPath animated:YES];
+        }
         if (self.kl_didSelectedAtIndexPath) {
             
             id model = [self getModelAtIndexPath:indexPath];
