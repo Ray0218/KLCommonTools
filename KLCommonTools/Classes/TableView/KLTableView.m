@@ -45,15 +45,15 @@ static NSString *const CELLH = @"cellH";
 #pragma mark - Private
 #pragma mark 判断是否是多个section的情况
 -(BOOL)isMultiDatas{
-    return self.zxDatas.count && [[self.zxDatas objectAtIndex:0] isKindOfClass:[NSArray class]];
+    return self.klDataArray.count && [[self.klDataArray objectAtIndex:0] isKindOfClass:[NSArray class]];
 }
 
 #pragma mark 获取对应indexPath的model
 -(id)getModelAtIndexPath:(NSIndexPath *)indexPath{
     id model = nil;;
     if([self isMultiDatas]){
-        if(indexPath.section < self.zxDatas.count){
-            NSArray *sectionArr = self.zxDatas[indexPath.section];
+        if(indexPath.section < self.klDataArray.count){
+            NSArray *sectionArr = self.klDataArray[indexPath.section];
             if(indexPath.row < sectionArr.count){
                 model = sectionArr[indexPath.row];
             }else{
@@ -63,8 +63,8 @@ static NSString *const CELLH = @"cellH";
             NSAssert(NO, [NSString stringWithFormat:@"数据源异常，请检查数据源！"]);
         }
     }else{
-        if(indexPath.row < self.zxDatas.count){
-            model = self.zxDatas[indexPath.row];
+        if(indexPath.row < self.klDataArray.count){
+            model = self.klDataArray[indexPath.row];
         }else{
             return nil ;
             //            NSAssert(NO, [NSString stringWithFormat:@"数据源异常，请检查数据源！"]);
@@ -205,14 +205,14 @@ static NSString *const CELLH = @"cellH";
             return self.kl_setNumberOfRowsInSection(section);
         }else{
             if([self isMultiDatas]){
-                NSArray *sectionArr = [self.zxDatas objectAtIndex:section];
+                NSArray *sectionArr = [self.klDataArray objectAtIndex:section];
                 if(![sectionArr isKindOfClass:[NSArray class]]){
                     NSAssert(NO, @"数据源内容不符合要求，多section情况数据源中必须皆为数组！");
                     return 0;
                 }
                 return sectionArr.count;
             }else{
-                return self.zxDatas.count;
+                return self.klDataArray.count;
             }
         }
         
@@ -229,7 +229,7 @@ static NSString *const CELLH = @"cellH";
         if(self.kl_setNumberOfSectionsInTableView){
             return self.kl_setNumberOfSectionsInTableView(tableView);
         }else{
-            return [self isMultiDatas] ? self.zxDatas.count : 1;
+            return [self isMultiDatas] ? self.klDataArray.count : 1;
         }
     }
 }
@@ -264,7 +264,7 @@ static NSString *const CELLH = @"cellH";
             
         }
     }
-    NSMutableArray *secArr = self.zxDatas.count ? [self isMultiDatas] ? self.zxDatas[section] : self.zxDatas : nil;
+    NSMutableArray *secArr = self.klDataArray.count ? [self isMultiDatas] ? self.klDataArray[section] : self.klDataArray : nil;
     
     if (self.kl_getHeaderViewInSection) {
         self.kl_getHeaderViewInSection(section,headerView,secArr);
@@ -292,7 +292,7 @@ static NSString *const CELLH = @"cellH";
             
         }
     }
-    NSMutableArray *secArr = self.zxDatas.count ? [self isMultiDatas] ? self.zxDatas[section] : self.zxDatas : nil;
+    NSMutableArray *secArr = self.klDataArray.count ? [self isMultiDatas] ? self.klDataArray[section] : self.klDataArray : nil;
     
     if (self.kl_getFooterViewInSection) {
         self.kl_getFooterViewInSection(section,footerView,secArr);
@@ -316,7 +316,7 @@ static NSString *const CELLH = @"cellH";
             headerView = [self getHeaderViewInSection:section];
             
         }
-        if(headerView && (section < self.zxDatas.count || (self.kl_showHeaderWhenNoMsg &&  section == 0))){
+        if(headerView && (section < self.klDataArray.count || (self.kl_showHeaderWhenNoMsg &&  section == 0))){
             
             return headerView.frame.size.height;
         }
@@ -343,7 +343,7 @@ static NSString *const CELLH = @"cellH";
             footerView = [self getFooterViewInSection:section];
         }
         
-        if(footerView &&  (section < self.zxDatas.count || (self.kl_showFooterWhenNoMsg &&  section == 0))){
+        if(footerView &&  (section < self.klDataArray.count || (self.kl_showFooterWhenNoMsg &&  section == 0))){
             return footerView.frame.size.height;
         }
         
@@ -456,17 +456,17 @@ static NSString *const CELLH = @"cellH";
 #pragma mark-
 
 #pragma mark zxDatas Setter
--(void)setZxDatas:(NSMutableArray *)zxDatas{
-    _zxDatas = zxDatas;
+-(void)setKlDataArray:(NSMutableArray *)zxDatas{
+    _klDataArray = zxDatas;
     if(zxDatas){
-        NSAssert([_zxDatas isKindOfClass:[NSArray class]], @"zxDatas必须为数组");
+        NSAssert([_klDataArray isKindOfClass:[NSArray class]], @"zxDatas必须为数组");
     }
     [self reloadData];
 }
 
 #pragma mark ZXTableView默认初始化设置
 -(void)privateSetZXTableView{
-    self.zxDatas = [NSMutableArray array];
+    self.klDataArray = [NSMutableArray array];
     self.delegate = self;
     self.dataSource = self;
     self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];

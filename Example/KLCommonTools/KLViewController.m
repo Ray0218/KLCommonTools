@@ -94,7 +94,7 @@
     
     
     
-    self.rTableView.zxDatas = @[@"测试本地交互",@"直接跳转链接",@"直接跳转视频链接",@"post跳转链接",@"图片滑动"];
+    self.rTableView.klDataArray = @[@"测试本地交互",@"直接跳转链接",@"直接跳转视频链接",@"post跳转链接",@"图片滑动"];
     
     
     __weak typeof(self) weakSelf = self ;
