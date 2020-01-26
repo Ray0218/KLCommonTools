@@ -456,10 +456,11 @@ static NSString *const CELLH = @"cellH";
 #pragma mark-
 
 #pragma mark zxDatas Setter
--(void)setKlDataArray:(NSMutableArray *)zxDatas{
-    _klDataArray = zxDatas;
-    if(zxDatas){
-        NSAssert([_klDataArray isKindOfClass:[NSArray class]], @"zxDatas必须为数组");
+
+-(void)setKlDataArray:(NSMutableArray *)klDataArray{
+     _klDataArray = klDataArray;
+    if(klDataArray){
+        NSAssert([_klDataArray isKindOfClass:[NSArray class]], @"klDataArray必须为数组");
     }
     [self reloadData];
 }

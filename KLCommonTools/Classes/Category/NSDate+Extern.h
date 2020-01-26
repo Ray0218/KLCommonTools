@@ -58,6 +58,9 @@ extern NSString *kl_DateFormatter_HH_mm;
 
 +(NSDate *)beforYear:(NSInteger)year  andCurrentTime:(NSDate *)currentTime ;
 
++(NSUInteger)kl_getDayCountWithYear:(NSInteger)year  month:(NSInteger)month ;
+
+
 @property (nonatomic, assign, readonly) int kl_nearestHour;
 @property (nonatomic, assign, readonly) int kl_hour;
 @property (nonatomic, assign, readonly) int kl_minute;
