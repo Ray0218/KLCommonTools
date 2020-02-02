@@ -1,28 +1,28 @@
 PODS:
-  - KLCommonTools (0.3.2):
-    - KLCommonTools/Category (= 0.3.2)
-    - KLCommonTools/Configure (= 0.3.2)
-    - KLCommonTools/ImageScroll (= 0.3.2)
-    - KLCommonTools/Others (= 0.3.2)
-    - KLCommonTools/TableView (= 0.3.2)
-    - KLCommonTools/WebView (= 0.3.2)
-  - KLCommonTools/Category (0.3.2):
+  - KLCommonTools (0.3.9):
+    - KLCommonTools/Category (= 0.3.9)
+    - KLCommonTools/Configure (= 0.3.9)
+    - KLCommonTools/ImageScroll (= 0.3.9)
+    - KLCommonTools/Others (= 0.3.9)
+    - KLCommonTools/TableView (= 0.3.9)
+    - KLCommonTools/WebView (= 0.3.9)
+  - KLCommonTools/Category (0.3.9):
     - KLCommonTools/Configure
-  - KLCommonTools/Configure (0.3.2)
-  - KLCommonTools/ImageScroll (0.3.2):
+  - KLCommonTools/Configure (0.3.9)
+  - KLCommonTools/ImageScroll (0.3.9):
     - Masonry
     - SDWebImage
-  - KLCommonTools/Others (0.3.2):
+  - KLCommonTools/Others (0.3.9):
     - KLCommonTools/Configure
     - MBProgressHUD (~> 0.9.2)
-  - KLCommonTools/TableView (0.3.2):
+  - KLCommonTools/TableView (0.3.9):
     - KLCommonTools/Category
-  - KLCommonTools/WebView (0.3.2)
+  - KLCommonTools/WebView (0.3.9)
   - Masonry (1.1.0)
   - MBProgressHUD (0.9.2)
-  - SDWebImage (5.5.0):
-    - SDWebImage/Core (= 5.5.0)
-  - SDWebImage/Core (5.5.0)
+  - SDWebImage (5.5.1):
+    - SDWebImage/Core (= 5.5.1)
+  - SDWebImage/Core (5.5.1)
 
 DEPENDENCIES:
   - KLCommonTools (from `../`)
@@ -38,10 +38,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KLCommonTools: 750a87d396c0ab23e39112d06d65b975bb808ef0
+  KLCommonTools: 2c23f6f6fc0fa03bf41cc42538bf873516c37d4b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  SDWebImage: 86589f0d47a7de15827640c71813e23fd428965c
+  SDWebImage: 1245d058b7b8f59adef7a6da6bbafd4f1ab67041
 
 PODFILE CHECKSUM: e02ff4289eeaca044ceb1d818b519b623d94dd60
 

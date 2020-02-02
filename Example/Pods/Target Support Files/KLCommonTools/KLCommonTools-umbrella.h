@@ -12,6 +12,7 @@
 
 #import "NSDate+Extern.h"
 #import "NSObject+SafeValue.h"
+#import "NSString+KLExtern.h"
 #import "NSURL+Swizzer.h"
 #import "UIImage+Color.h"
 #import "UINavigationController+TabBarHidden.h"
