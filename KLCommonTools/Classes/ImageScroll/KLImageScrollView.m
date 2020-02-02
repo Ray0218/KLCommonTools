@@ -44,10 +44,6 @@ static NSString *cellIdentify = @"KLImageScrollView";
     return self;
 }
 
-
-
-
-
 -(void)setRBackImgUrlString:(NSString *)rBackImgUrlString{
     _rBackImgUrlString = rBackImgUrlString ;
     if ([rBackImgUrlString hasPrefix:@"http"]) {

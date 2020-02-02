@@ -7,8 +7,7 @@
 
 #import "NSString+KLExtern.h"
 #import <CommonCrypto/CommonDigest.h>
-
-
+ 
 @implementation NSString (KLExtern)
 
 
@@ -117,7 +116,6 @@
 
 -(BOOL)kl_containcLowerCharacter
 {
-    
     // 验证密码是否包含小写字母
     NSString *lowerPattern = @".*[a-z]+.*";
     NSPredicate *lowerPred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", lowerPattern];
