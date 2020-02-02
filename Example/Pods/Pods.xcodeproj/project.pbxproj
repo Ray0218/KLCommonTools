@@ -113,8 +113,8 @@
 		6EC508FFF6F08FCBBAB1D7DF2E4EFBEF /* SDImageAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BF96CDEF6ABFC9023BD02D139BB08D /* SDImageAssetManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		70E12BA99F0827C57C6C5E1A92E8AAE2 /* SDImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 127CD7A193CB4EB077F5CE55E13920AF /* SDImageCodersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		715F500EA2F88A810E949C213E35384F /* KLCommonTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E965839C2B47D98E192024347F3B16C8 /* KLCommonTools-dummy.m */; };
-		7167EA3223E67ADD00CCFDE9 /* NSString+KLExtern.h in Headers */ = {isa = PBXBuildFile; fileRef = 7167EA3023E67ADD00CCFDE9 /* NSString+KLExtern.h */; };
-		7167EA3323E67ADD00CCFDE9 /* NSString+KLExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167EA3123E67ADD00CCFDE9 /* NSString+KLExtern.m */; };
+		7167EA3623E67F2600CCFDE9 /* NSString+KLExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167EA3423E67F2500CCFDE9 /* NSString+KLExtern.m */; };
+		7167EA3723E67F2600CCFDE9 /* NSString+KLExtern.h in Headers */ = {isa = PBXBuildFile; fileRef = 7167EA3523E67F2500CCFDE9 /* NSString+KLExtern.h */; };
 		71EEFE2BF064B4049B7639B1F3083844 /* JXBWKWebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA49BA040729DBCA9BCAF53646A823CB /* JXBWKWebViewPool.m */; };
 		77FD61A1C0F270B7796898E689C76F26 /* SDWebImageCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B33FBE350C5464B26DC7450ADA300AB /* SDWebImageCacheSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7880CA2E90DD748A2DADC0C2D62BB0BC /* SDWebImageDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = F1644440C080A7B7529B043F39478AB8 /* SDWebImageDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -462,8 +462,8 @@
 		6EDF0A67209BCFA7366A20216934B8AF /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
 		703958D7E8DBBB9FB4752FAF840278F2 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
 		713E22BE24E5A50A88CB01CE7B6DFE11 /* Pods-KLCommonTools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KLCommonTools_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7167EA3023E67ADD00CCFDE9 /* NSString+KLExtern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+KLExtern.h"; sourceTree = "<group>"; };
-		7167EA3123E67ADD00CCFDE9 /* NSString+KLExtern.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+KLExtern.m"; sourceTree = "<group>"; };
+		7167EA3423E67F2500CCFDE9 /* NSString+KLExtern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+KLExtern.m"; path = "KLCommonTools/Classes/Category/NSString+KLExtern.m"; sourceTree = "<group>"; };
+		7167EA3523E67F2500CCFDE9 /* NSString+KLExtern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+KLExtern.h"; path = "KLCommonTools/Classes/Category/NSString+KLExtern.h"; sourceTree = "<group>"; };
 		7196DD3BF5FE18EBDA1DEF9C52D8439A /* KLGetProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLGetProperty.m; path = KLCommonTools/Classes/TableView/KLGetProperty.m; sourceTree = "<group>"; };
 		719C44E09CCAC07DF5F153D132761A5D /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/Core/UIImage+GIF.m"; sourceTree = "<group>"; };
 		720CA9C09D2389599238D31579F6846A /* KLTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KLTableView.m; path = KLCommonTools/Classes/TableView/KLTableView.m; sourceTree = "<group>"; };
@@ -913,13 +913,13 @@
 				61ACB36A38629A4BE4C6962B0931A66D /* NSURL+Swizzer.h */,
 				6A033E6282C56D749844FF65649283AD /* NSURL+Swizzer.m */,
 				102940E1A1A63FBB23F5761F0B68D515 /* UIImage+Color.h */,
+				7167EA3523E67F2500CCFDE9 /* NSString+KLExtern.h */,
+				7167EA3423E67F2500CCFDE9 /* NSString+KLExtern.m */,
 				BCD4140744942B784519BFE64CE5A419 /* UIImage+Color.m */,
 				F4A7C725985B1E8458C25E8143213699 /* UINavigationController+TabBarHidden.h */,
 				0F63336341B702E1A16263FE8401B458 /* UINavigationController+TabBarHidden.m */,
 				602B3F9057CC8A75E9874023A7B9CC6A /* UIViewController+Transition.h */,
 				487CFFEC8F295DE8FD0D355B4A77726F /* UIViewController+Transition.m */,
-				7167EA3023E67ADD00CCFDE9 /* NSString+KLExtern.h */,
-				7167EA3123E67ADD00CCFDE9 /* NSString+KLExtern.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -1354,7 +1354,7 @@
 				A1D07CC5A22AD2A5BD1FA340FEB40DD7 /* KLTableView.h in Headers */,
 				E9F229E2DD9ADF9155D8305FF3DA4C67 /* KLTextField.h in Headers */,
 				EBC7E966CF84B94D19DA096CA0D6219E /* KLWebView.h in Headers */,
-				7167EA3223E67ADD00CCFDE9 /* NSString+KLExtern.h in Headers */,
+				7167EA3723E67F2600CCFDE9 /* NSString+KLExtern.h in Headers */,
 				082D2F76335D83F7D34E7B2973257B9F /* KLWebViewController.h in Headers */,
 				662B37C2796244714E4E80A9F9DFE66A /* KLWKScriptMessageHandler.h in Headers */,
 				A5CE0A48FAF5AFA721375824EFBB3D5D /* NSDate+Extern.h in Headers */,
@@ -1716,7 +1716,7 @@
 				C03E42424C633EADA8B1D1A26CF9CE2E /* KLWebView.m in Sources */,
 				88A32012050474AEEDD38ECFF9B7B879 /* KLWebViewController.m in Sources */,
 				1A6079052502131432B48949A4F2A8E8 /* KLWKScriptMessageHandler.m in Sources */,
-				7167EA3323E67ADD00CCFDE9 /* NSString+KLExtern.m in Sources */,
+				7167EA3623E67F2600CCFDE9 /* NSString+KLExtern.m in Sources */,
 				17A4B07EA8BBD240A44DE2FEBC73327A /* NSDate+Extern.m in Sources */,
 				6B9DAE4BACBEC81064E86DB91EF97A30 /* NSObject+SafeValue.m in Sources */,
 				F6DD42E0070EEDB79B55BB1BC2C25F1A /* NSURL+Swizzer.m in Sources */,
