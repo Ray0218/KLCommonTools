@@ -21,7 +21,7 @@
 @implementation JXBWKWebViewPool
 
 +(void)load {
-    NSLog(@"load JXBWKWebViewPool") ;
+//    NSLog(@"load JXBWKWebViewPool") ;
       __block id observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         [self prepareWebView];
         [[NSNotificationCenter defaultCenter] removeObserver:observer];

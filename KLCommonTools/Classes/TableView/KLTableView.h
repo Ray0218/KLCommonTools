@@ -19,7 +19,7 @@
 
 #pragma mark - 数据设置
 ///设置所有数据数组
-@property(nonatomic, strong,nonnull)NSMutableArray *klDataArray;
+@property(nonatomic, strong,nullable)NSMutableArray *klDataArray;
 
 ///声明cell
 @property (nonatomic, copy,nullable) UITableViewCell* _Nullable (^kl_setCellAtIndexPath)(UITableView* _Nonnull tableView, NSIndexPath * _Nonnull indexPath);
