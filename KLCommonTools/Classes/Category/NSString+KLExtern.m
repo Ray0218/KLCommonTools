@@ -66,9 +66,7 @@
 //
 // }
 //
-
-
-
+ 
 -(BOOL)kl_checkPassWord
 {
     // 验证密码长度
