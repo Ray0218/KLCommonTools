@@ -47,6 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// base64解密
 -(NSString*)kl_Base64DencodeString  ;
 
+//银行卡号是否合法
+-(BOOL)kl_isBankCard;
+
+//json字符串转字典
+- (NSDictionary *)kl_stringTodictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

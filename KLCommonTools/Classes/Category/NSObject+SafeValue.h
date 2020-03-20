@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(id)kl_safeValueForKey:(NSString *)key;
 -(void)kl_safeSetValue:(id)value forKey:(NSString *)key;
-
+- (BOOL)kl_isNilOrEmpty:(id)string;
  
 
 @end

@@ -254,6 +254,74 @@
     return  [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
+#pragma mark 判断银行卡号是否合法
+-(BOOL)kl_isBankCard {
+    
+    NSString *cardNumber = self ;
+  if(cardNumber.length==0){
+    return NO;
+  }
+  NSString *digitsOnly = @"";
+  char c;
+  for (int i = 0; i < cardNumber.length; i++){
+    c = [cardNumber characterAtIndex:i];
+    if (isdigit(c)){
+      digitsOnly =[digitsOnly stringByAppendingFormat:@"%c",c];
+    }
+  }
+  int sum = 0;
+  int digit = 0;
+  int addend = 0;
+  BOOL timesTwo = false;
+  for (NSInteger i = digitsOnly.length - 1; i >= 0; i--){
+    digit = [digitsOnly characterAtIndex:i] - '0';
+    if (timesTwo){
+      addend = digit * 2;
+      if (addend > 9) {
+        addend -= 9;
+      }
+    }
+    else {
+      addend = digit;
+    }
+    sum += addend;
+    timesTwo = !timesTwo;
+  }
+  int modulus = sum % 10;
+  return modulus == 0;
+}
+
+- (NSDictionary *)kl_stringTodictionary {
+    
+    if (self == nil || self.length == 0 || [self isKindOfClass:[NSNull class]]  ) {
+        return nil;
+    }
+    
+    if ([self isKindOfClass:[NSString class]] && [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
+        return nil ;
+        
+    }
+    if ([self isKindOfClass:[NSString class]] && ([self isEqualToString:@"<null>"] || [self isEqualToString:@"(null)"])) {
+        return nil;
+    }
+    
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *error;
+    
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                         
+                                                        options:NSJSONReadingMutableContainers
+                         
+                                                          error:&error];
+    
+    if(error) {
+        NSLog(@"json解析失败：error:%@",error);
+        return nil;
+    }
+    return dic;
+}
+
 
 @end
 
