@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'KLCommonTools'
-    s.version          = '0.4.4'
+    s.version          = '0.4.5'
     s.summary          = 'A short description of KLCommonTools.'
     
     # This description is used to generate tags and improve search results.
@@ -47,8 +47,13 @@ Pod::Spec.new do |s|
     s.subspec 'Others' do |ss|
         ss.source_files     = 'KLCommonTools/Classes/Others/**/*'
         ss.dependency 'KLCommonTools/Configure'
-        ss.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
-    end
+     end
+    
+    s.subspec 'Progress' do |ss|
+           ss.source_files     = 'KLCommonTools/Classes/Progress/**/*'
+           ss.dependency 'KLCommonTools/Configure'
+           ss.dependency 'MBProgressHUD', '~> 0.9.2'#依赖库
+       end
     
     s.subspec 'WebView' do |ss|
         ss.source_files     = 'KLCommonTools/Classes/WebView/**/*.{h,m}'
