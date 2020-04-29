@@ -1,6 +1,6 @@
 {
   "name": "KLCommonTools",
-  "version": "0.4.0",
+  "version": "0.4.7",
   "summary": "A short description of KLCommonTools.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Ray0218/KLCommonTools",
@@ -13,11 +13,16 @@
   },
   "source": {
     "git": "https://github.com/Ray0218/KLCommonTools.git",
-    "tag": "0.4.0"
+    "tag": "0.4.7"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "default_subspecs": [
+    "Configure",
+    "Category",
+    "Others"
+  ],
   "resource_bundles": {
     "KLCommonTools": [
       "KLCommonTools/Assets/*"
@@ -40,6 +45,15 @@
     {
       "name": "Others",
       "source_files": "KLCommonTools/Classes/Others/**/*",
+      "dependencies": {
+        "KLCommonTools/Configure": [
+
+        ]
+      }
+    },
+    {
+      "name": "Progress",
+      "source_files": "KLCommonTools/Classes/Progress/**/*",
       "dependencies": {
         "KLCommonTools/Configure": [
 

@@ -82,4 +82,7 @@ git push  --tags
 
 #pod repo push CustomPrivatePods ${ProjectName}.podspec --allow-warnings --use-libraries --use-modular-headers
 
-pod trunk push  ${ProjectName}.podspec --allow-warnings --use-libraries  
+# pod trunk push  ${ProjectName}.podspec --allow-warnings --use-libraries  
+
+
+pod repo push KLCommonToolSDK ${ProjectName}.podspec --allow-warnings --use-libraries --sources=https://github.com/CocoaPods/Specs.git --verbose
