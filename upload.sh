@@ -73,8 +73,12 @@ echo -e "================================================\n"
 
 git add .
 git commit -am ${NewVersionNumber}${commitDesc}
+git push origin master
+
 git tag ${NewVersionNumber}
-git push origin master --tags
+git push  --tags
+
+#git push origin master --tags
 
 #pod repo push CustomPrivatePods ${ProjectName}.podspec --allow-warnings --use-libraries --use-modular-headers
 
